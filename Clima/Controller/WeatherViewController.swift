@@ -29,7 +29,6 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
     }
     
     func printText(_ textField: UITextField) {
-        print(textField.text!)
         textField.endEditing(true)
     }
     
@@ -53,9 +52,10 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
         
         let city = searchTextField.text ?? ""
             
-        weatherManager.fetchWeather(cityName: city)
+       weatherManager.fetchWeather(cityName: city)
         
         textField.text = ""
+
     }
 }
 
